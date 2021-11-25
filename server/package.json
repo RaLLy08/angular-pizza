@@ -1,0 +1,38 @@
+{
+  "name": "azad-kichibekov",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node dist/app.js",
+    "dev": "ts-node-dev ./src/app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://10.8.25.32/learn-nodejs/azad-kichibekov.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/express": "^4.17.13",
+    "eslint-plugin-security": "^1.4.0",
+    "ts-node": "^10.3.0",
+    "ts-node-dev": "^1.1.8",
+    "tslint": "5.12.1",
+    "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "4.16.4",
+    "express-validator": "^6.13.0",
+    "helmet": "^4.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.10",
+    "uuid": "^8.3.2"
+  }
+}

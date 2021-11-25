@@ -1,0 +1,3 @@
+export const ACCESS_TOKEN_LIFETIME = 60 * 60;
+export const REFRESH_TOKEN_LIFETIME = "1d";
+export const REFRESH_TOKEN_COOKIE_LIFETIME = 24 * 60 * 60 * 1000;

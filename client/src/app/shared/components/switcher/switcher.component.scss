@@ -1,0 +1,79 @@
+.switcher {
+    position: relative;
+}
+
+.switcher__window {
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 16px;
+}
+
+.switcher__window > ul {
+   padding: 0;
+   margin: 0;
+   transition: 1.3s;
+   transition-timing-function: cubic-bezier(.11,.25,.02,.78);
+}
+
+.switcher__window > ul > li {
+   display: inline-block;
+}
+
+.switcher__window > ul > li > img {
+    width: inherit;
+}
+
+.arrow {
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    color: beige;
+    opacity: 1;
+    &:active {
+        transition: 0.1s;
+        transform: scaleY(0.5) translateY(-200%);
+    }
+}
+
+.prev {
+    top: 50%;
+    transform: translateY(-100%);
+    left: 10px;
+}
+
+.next {
+    top: 50%;
+    transform: translateY(-100%);
+    right: 10px;
+}
+
+.switcher__progress > ul > li {
+    display: inline-block;
+    margin-right: 6px;
+    width: 29px;
+    height: 4px;
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+.switcher__progress > ul {
+    margin: 0;
+    padding: 0;
+}
+
+.switcher__progress {
+    position: absolute;
+    bottom: 20px;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.progress__item {
+    background-color: #808080;
+}
+
+.progress__item-selected {
+    background-color: #f82c44;
+}

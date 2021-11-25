@@ -1,0 +1,29 @@
+$itemWidth:292px;
+$screenWidth:1280px;
+$columns: 4;
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+
+    :nth-child(4n+4) {
+        margin-right: 0px;
+    }
+}
+
+.list__item {
+    width: $itemWidth;
+    cursor: pointer;
+    margin-right: ($screenWidth - $itemWidth * $columns) / ($columns - 1);
+    margin-bottom: 60px;
+}
+
+.item__body {
+    display: flex;
+    flex-direction: column;
+}
+
+.item__body-img {
+    width: 95%;
+    margin-left: 5%;
+}

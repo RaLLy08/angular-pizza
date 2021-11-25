@@ -1,0 +1,22 @@
+<div id="switcher" class="switcher">
+    <button class="arrow prev" (click)="onPrev()"><</button>
+    <div class="switcher__window">
+      <ul [style.marginLeft]="leftShift" [style.width]="itemsWidth">
+        <li [style.width]="itemWidth" *ngFor="let src of swithcherImgsSrc">
+            <img src={{src}}>
+        </li>
+      </ul>
+    </div>
+    <button class="arrow next" (click)="onNext()">></button>
+    <div class="switcher__progress">
+        <ul>
+            <li 
+                class="progress__item"
+                *ngFor="let src of swithcherImgsSrc; let i = index"
+                [class.progress__item-selected]="currentSlide === i"
+                (click)="onCertain(i)"
+            >
+            </li>
+        </ul>
+    </div>
+</div>

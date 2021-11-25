@@ -1,0 +1,47 @@
+<main>
+    <section class="wrapper__header">
+        <span>
+            Вход на сайт
+        </span>
+    </section>
+    <section class="wrapper__form">
+        <form (ngSubmit)="onSubmit(formdata)" #formdata="ngForm">
+            <div [class.focused]='phoneFocusClass || formdata.value.phone' [class.blured]='!phoneFocusClass'>
+                <label for="phone">Номер телефона</label>
+                <input 
+                        (focus)="phoneFocusClass=true;" 
+                        (blur)="phoneFocusClass=false;"
+                        [(ngModel)]="formdata.phone" 
+                        required 
+                        name="phone" 
+                        id="phone"
+                />
+            </div>
+            <div [class.focused]='passwordFocusClass || formdata.value.password' [class.blured]='!passwordFocusClass'>
+                <label for="password"> Пароль</label>
+                <input
+                    (focus)="passwordFocusClass=true;" 
+                    (blur)="passwordFocusClass=false;"
+                    [(ngModel)]="formdata.password" 
+                    required 
+                    minlength="6" 
+                    name="password" 
+                    id="password"
+                    type="password"
+                />
+            </div>
+            
+            <section class="form__footer">
+                <button type="submit"> Login </button>
+                <div class="footer__text">
+                    <h6>
+                        Продолжая, вы соглашаетесь на сбор и обработку персональных данных и пользовательским соглашением
+                    </h6>
+                </div>
+            </section>
+        </form>
+    </section>
+
+    <div class="modal__close" (click)="closeModal(modalId)">
+    </div>
+</main>

@@ -1,0 +1,51 @@
+:host {
+    min-width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0px 16px;
+}
+
+.left {
+    display: flex;
+    flex-direction: row;
+    & >:nth-child(n) {
+        margin-right: 40px;
+    }
+}
+
+.left__title {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.title__city {
+    color: rgb(255, 105, 0);
+    cursor: pointer;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.right__button {
+    border: none;
+    background: none;
+    background-color: rgb(243, 243, 247);
+    height: 32px;
+    padding: 8px 16px;
+    font-size: 14px;
+    line-height: 16px;
+    cursor: pointer;
+    border-radius: 99999px;
+    color: rgb(92, 99, 112);
+    &:hover {
+        color: black
+    }
+}

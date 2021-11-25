@@ -1,0 +1,138 @@
+main {
+    background-color: white;
+    border-radius: 16px;
+    padding: 26px 46px 0px 46px;
+    box-shadow: 0 0 15px rgb(146, 146, 166, 0.6);
+}
+
+.wrapper__header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.wrapper__header > span {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+
+$inputLeftPadding: 20px;
+$color-secondary: rgb(0, 0, 0, 0.6);
+
+.wrapper__form > form > div > input {
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 10px;
+    display: block;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.wrapper__form > form > div {
+    position: relative;
+    margin-top: 20px;
+}
+
+.wrapper__form > form > div > label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: $inputLeftPadding;
+    cursor: auto;
+    color: $color-secondary;
+    padding: 0px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: 200ms cubic-bezier(0, 0, 0.2, 1);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.wrapper__form > form > div.focused > label {
+    top: -20px;
+    left: 10px;
+    transform: translateY(0%);
+    font-size: 80%;
+}
+
+.form__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.footer__text {
+    width: 300px;
+    text-align: center;
+    color: $color-secondary;
+    padding: 5px;
+}
+
+button {
+    border: none;
+    background: none;
+    background-color: rgb(232, 97, 0);
+    height: 40px;
+    width: 200px;
+    padding: 8px 16px;
+    line-height: 16px;
+    cursor: pointer;
+    border-radius: 99999px;
+    color: white;
+    font-size: 16px;
+    transition: 0.2s;
+    &:hover {
+        background-color: rgb(224, 84, 2)
+    }
+    &:active {
+        background-color: rgb(232, 97, 0);
+        color: rgb(232, 151, 0)
+    }
+}
+
+// .modal__close {
+//     position: absolute;
+    // right: -20px;
+    // top: 0px;
+// }
+
+.modal__close {
+    position: absolute;
+    right: -40px;
+    top: 0px;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    transition: 0.1s;
+    &:hover {
+        transform: scale(1.1);
+    }
+    &:before, &:after {
+        position: absolute;
+        left: 15px;
+        content: ' ';
+        height: 33px;
+        width: 4px;
+        background-color: white;
+        border-radius: 9999px;
+    }
+    &:before {
+        transform: rotate(45deg);
+    }
+    &:after {
+        transform: rotate(-45deg);
+    }
+}
+
+ 
+ 
+  
+  

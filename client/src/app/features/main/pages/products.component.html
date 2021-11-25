@@ -1,0 +1,19 @@
+<main>
+    <h1>Пицца</h1>
+   <section class="list list-pizza">
+        <article class="list__item item-pizza" *ngFor="let product of products">
+            <main class="item__body">
+                <img class="item__body-img" src={{productPlaceholderSrc}}/> 
+                <div class="item__body-description">
+                    <h3>
+                        {{product.title}}
+                    </h3>
+                    <h5>
+                        {{product.description}}
+                    </h5>
+                </div>
+            </main>
+            <footer class="item__footer"></footer>
+        </article>
+   </section>
+</main>
